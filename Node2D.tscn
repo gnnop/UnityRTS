@@ -25,3 +25,5 @@ script = ExtResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Character"]
 frames = SubResource( 1 )
 animation = "New Anim"
+
+[node name="Node" type="Node" parent="."]
