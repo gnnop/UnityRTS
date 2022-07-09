@@ -6,21 +6,24 @@
 [node name="GameMenu" type="Node"]
 script = ExtResource( 2 )
 
-[node name="Node" type="Node" parent="."]
+[node name="Menu" type="Node2D" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="Node"]
+[node name="ColorRect" type="ColorRect" parent="Menu"]
 margin_right = 1040.0
 margin_bottom = 580.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="Node/ColorRect"]
+[node name="Button" type="Button" parent="Menu/ColorRect"]
 margin_left = 294.0
 margin_top = 204.0
 margin_right = 637.0
 margin_bottom = 342.0
 text = "New Game"
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[connection signal="button_up" from="Node/ColorRect/Button" to="Node/ColorRect/Button" method="_on_button_up"]
+[connection signal="button_up" from="Menu/ColorRect/Button" to="Menu/ColorRect/Button" method="_on_button_up"]
