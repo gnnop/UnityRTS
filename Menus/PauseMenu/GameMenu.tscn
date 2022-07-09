@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Menus/PauseMenu/GameMenu.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="GameMenu" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="CornerButton" type="Button" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -76.0
+margin_bottom = 70.0
+toggle_mode = true
+icon = ExtResource( 3 )
+
+[node name="MainMenu" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -188.5
+margin_top = -130.0
+margin_right = 188.5
+margin_bottom = 130.0
+color = Color( 0.0980392, 0.309804, 0.25098, 1 )
+
+[node name="GamePaused" type="Label" parent="MainMenu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -91.0
+margin_right = 91.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 1 )
+text = "Game Paused"
+align = 1
+
+[node name="Resume" type="Button" parent="MainMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -94.0
+margin_top = -24.0
+margin_right = 94.0
+margin_bottom = 7.0
+custom_fonts/font = SubResource( 1 )
+text = "Resume Game"
+
+[node name="ExitGame" type="Button" parent="MainMenu"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -92.0
+margin_top = -58.5
+margin_right = 96.0
+margin_bottom = -27.5
+custom_fonts/font = SubResource( 1 )
+text = "Exit Game"
+
+[connection signal="toggled" from="CornerButton" to="." method="_on_CornerButton_toggled"]
+[connection signal="pressed" from="MainMenu/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="MainMenu/ExitGame" to="." method="_on_ExitGame_pressed"]

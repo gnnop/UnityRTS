@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://serverState/GameObj.gd" type="Script" id=1]
-[ext_resource path="res://WorldGen.gd" type="Script" id=2]
+[ext_resource path="res://serverState/Game.gd" type="Script" id=1]
+[ext_resource path="res://serverState/WorldGen.gd" type="Script" id=2]
 [ext_resource path="res://dog.jpg" type="Texture" id=3]
 
 [sub_resource type="TileSet" id=1]
@@ -20,10 +20,10 @@
 0/shapes = [  ]
 0/z_index = 0
 
-[node name="GameObj" type="Node"]
+[node name="Game" type="Node"]
 script = ExtResource( 1 )
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="World" type="TileMap" parent="."]
 mode = 1
 tile_set = SubResource( 1 )
 cell_size = Vector2( 256, 256 )

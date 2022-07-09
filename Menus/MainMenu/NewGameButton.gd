@@ -15,4 +15,4 @@ func _ready():
 
 func _on_button_up():
 	print("Hello world!")
-	get_node("/root/GameMenu").check()
+	get_node("/root/UltraNode").check()
