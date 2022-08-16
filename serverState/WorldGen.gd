@@ -5,6 +5,18 @@ extends TileMap
 # var a = 2
 # var b = "text"
 
+
+
+#Now, in order to create the world, we can harvest the nodes from the map editor.
+#This should later be optimized into a pre-existing array:
+#get_used_cells()
+#First, it looks like I might want to place an abstraction on the UI though...
+
+
+
+
+
+
 var neighborhood = [Vector2(1, 0), Vector2(0, 1), Vector2(1, -1), Vector2(0, -1), Vector2(-1, 0), Vector2(-1, -1)]
 
 # Called when the node enters the scene tree for the first time.

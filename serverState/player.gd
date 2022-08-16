@@ -15,5 +15,4 @@ func _input(event):
 	for i in range(6):
 		if event.is_action_pressed(keys[i]):
 			cur_pos += neighborhood(cur_pos)[i]
-			print($"..".map_to_world(cur_pos))
 			position = $"..".map_to_world(cur_pos)
